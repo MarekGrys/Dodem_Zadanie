@@ -1,0 +1,6 @@
+@Dodem_Zadanie_HostAddress = http://localhost:5237
+
+GET {{Dodem_Zadanie_HostAddress}}
+Accept: application/json
+
+###
