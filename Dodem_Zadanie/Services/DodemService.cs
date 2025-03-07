@@ -37,7 +37,6 @@ namespace Dodem_Zadanie.Services
 
 
             string result = template.Content;
-            //Dzięki temu foreach nie wykonuje się po każdej zmiennej w przykładowym modelu, a tylko po podanych
             PropertyInfo[] properties = model.GetType().GetProperties();
 
             foreach (var property in properties)
@@ -89,6 +88,7 @@ namespace Dodem_Zadanie.Services
             return templates;
         }
 
+        //Przykładowe dane
         public List<MailTemplate> TestData()
         {
 
