@@ -2,6 +2,8 @@
 {
     public class PlaceholderBase
     {
+        //Zamysł za zmiennymi nullable jest taki, że nie trzeba obsługiwać wszystkich zmiennych,
+        //a tylko te które są potrzebne, używając jednego modelu
         public required string Imie { get; set; }
         public string? CourseTitle { get; set; }
         public string? CertificateLink { get; set; }

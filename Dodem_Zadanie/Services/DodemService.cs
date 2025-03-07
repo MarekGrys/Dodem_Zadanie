@@ -27,16 +27,17 @@ namespace Dodem_Zadanie.Services
                 throw new Exception("Nieprawidłowe dane!");
 
             //Używane przy utworzonej bazie danych:
-            var template = _dbContext.MailTemplates.FirstOrDefault(x => x.ID == templateID);
+            //var template = _dbContext.MailTemplates.FirstOrDefault(x => x.ID == templateID);
 
             //Używane w przypadku braku bazy danych:
-            //var template = TestData().FirstOrDefault(x => x.ID == templateID);
+            var template = TestData().FirstOrDefault(x => x.ID == templateID);
 
             if (template == null)
                 throw new Exception("Nieprawidłowe ID!");
 
 
             string result = template.Content;
+            //Dzięki temu foreach nie wykonuje się po każdej zmiennej w przykładowym modelu, a tylko po podanych
             PropertyInfo[] properties = model.GetType().GetProperties();
 
             foreach (var property in properties)
@@ -78,10 +79,10 @@ namespace Dodem_Zadanie.Services
         public List<MailTemplate> GetTemplates()
         {
             //Używane przy utworzonej bazie danych:
-            var templates = _dbContext.MailTemplates.ToList();
+            //var templates = _dbContext.MailTemplates.ToList();
 
             //Używanie w przypadku braku bazy danych
-            //var templates = TestData();
+            var templates = TestData();
 
             if (templates == null)
                 throw new Exception("Brak szablonów!");
@@ -90,9 +91,16 @@ namespace Dodem_Zadanie.Services
 
         public List<MailTemplate> TestData()
         {
-         
+
             return new List<MailTemplate>()
             {
+                new MailTemplate()
+                {
+                    ID = 6,
+                    Name = "welcomeEmail",
+                    Subject = "Witamy w EduTech!",
+                    Content = "Cześć {{imie}},\r\nDziękujemy za rejestrację na platformie EduTech.\r\nOdwiedź naszą stronę, aby rozpocząć naukę: {{platformlink}}.\r\nPozdrawiamy,\r\nZespół EduTech"
+                },
 
                 new MailTemplate()
                 {

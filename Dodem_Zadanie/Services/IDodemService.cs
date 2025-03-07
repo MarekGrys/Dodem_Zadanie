@@ -7,6 +7,5 @@ namespace Dodem_Zadanie.Services
     {
         string SendEmail(string recipient, int templateID, PlaceholderBase model);
         List<MailTemplate> GetTemplates();
-        List<MailTemplate> TestData();
     }
 }
