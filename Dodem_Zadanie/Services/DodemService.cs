@@ -99,7 +99,7 @@ namespace Dodem_Zadanie.Services
                     ID = 6,
                     Name = "welcomeEmail",
                     Subject = "Witamy w EduTech!",
-                    Content = "Cześć {{imie}},\r\nDziękujemy za rejestrację na platformie EduTech.\r\nOdwiedź naszą stronę, aby rozpocząć naukę: {{platformlink}}.\r\nPozdrawiamy,\r\nZespół EduTech"
+                    Content = "Cześć {{name}},\r\nDziękujemy za rejestrację na platformie EduTech.\r\nOdwiedź naszą stronę, aby rozpocząć naukę: {{platformlink}}.\r\nPozdrawiamy,\r\nZespół EduTech"
                 },
 
                 new MailTemplate()
@@ -107,14 +107,14 @@ namespace Dodem_Zadanie.Services
                     ID = 7,
                     Name = "courseEnrollmentConfirmation",
                     Subject = "Potwierdzenie zapisu na kurs",
-                    Content = "Cześć {{imie}},\r\n\r\nPotwierdzamy Twój zapis na kurs: {{coursetitle}}.\r\nData rozpoczęcia kursu: {{startdate}}.\r\nSzczegóły kursu znajdziesz na naszej stronie: {{courselink}}.\r\n\r\nPowodzenia,\r\nZespół EduTech"
+                    Content = "Cześć {{name}},\r\n\r\nPotwierdzamy Twój zapis na kurs: {{coursetitle}}.\r\nData rozpoczęcia kursu: {{startdate}}.\r\nSzczegóły kursu znajdziesz na naszej stronie: {{courselink}}.\r\n\r\nPowodzenia,\r\nZespół EduTech"
                 },
                 new MailTemplate()
                 {
                     ID = 8,
                     Name = "courseCompletionCertificate",
                     Subject = "Gratulacje z ukończenia kursu",
-                    Content = "Cześć {{imie}},\r\n\r\nGratulujemy ukończenia kursu: {{coursetitle}}!\r\nKliknij poniższy link, aby pobrać swój certyfikat: {{certificatelink}}.\r\n\r\nŻyczymy dalszych sukcesów,\r\nZespół EduTech"
+                    Content = "Cześć {{name}},\r\n\r\nGratulujemy ukończenia kursu: {{coursetitle}}!\r\nKliknij poniższy link, aby pobrać swój certyfikat: {{certificatelink}}.\r\n\r\nŻyczymy dalszych sukcesów,\r\nZespół EduTech"
                 }
             };
         }
